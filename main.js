@@ -37,26 +37,27 @@ const flip20=document.createElement('button')
 mainElement.append(flip20)
 flip20.append('20 Flips!')
 flip20.id='flip20'
+function display20flips(){    for(i=0;i<20;i++){if(i<19){
+    coin.flip()
+    mainElement.append(flipStr)
+    flipStr.append(coin.toString()+', ')}else{
+        coin.flip()
+    mainElement.append(flipStr)
+    flipStr.append(coin.toString())}}}
 flip20.addEventListener("click", function () {
 
-    for(i=0;i<20;i++){if(i<19){
-coin.flip()
-mainElement.append(flipStr)
-flipStr.append(coin.toString()+', ')}else{
-    coin.flip()
-mainElement.append(flipStr)
-flipStr.append(coin.toString())
+    display20flips()
 }
-    }
-     })
+    
+     )
      const flip20Images=document.createElement('button')
      mainElement.append(flip20Images)
      flip20Images.append('20 images!')
-     flip20Images.addEventListener("click", function () {
-            for(i=0;i<20;i++){
+     function display20Images(){            for(i=0;i<20;i++){
         coin.flip()
-        coin.toHTML()
-            }})
+        coin.toHTML()}}
+     flip20Images.addEventListener("click", function () {
+         display20Images()})
  const reset=document.createElement('button')
  mainElement.append(reset)
 reset.append('Pick up the coins!')
